@@ -4,10 +4,10 @@ setlocal EnableDelayedExpansion
 echo -------------------------------------------------------------------------------------
 echo                        Welcome to CMDR                         ,_.-=` ` ` ` ~,_     *
 echo                                                                '--,.     .-.  ,=.   *
-echo            Windows CMD wrapper with custom commands               /     { * )`;-.}  *
+echo            Windows CMD wrapper with custom commands               /     { * }`;-.}  *
 echo                                                                   :      '-' /__ :  *
 echo                                                                   /          \_,\:  *
-echo                 Copyright (c) 2017 Ilian Iliev                    :          (      *
+echo                 Copyright (c) 2017 Ilian Iliev                    :          {      *
 echo -------------------------------------------------------------------------------------
 
 set v=
