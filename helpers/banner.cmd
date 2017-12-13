@@ -12,6 +12,6 @@ echo ---------------------------------------------------------------------------
 
 set v=
 for /f "tokens=4-7 delims=[.] " %%i in ('ver') do @(if %%i==Version (set v=%%j.%%k.%%l) else (set v=%%i.%%j.%%k))
-call helpers/color_print bright_white "Microsoft Windows [Version !v!]"
+call %~dp0/color_print bright_white "Microsoft Windows [Version !v!]"
 
 endlocal

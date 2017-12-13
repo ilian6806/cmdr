@@ -18,6 +18,8 @@ set NEGATIVE_COMMANDS="n" "N" "no" "NO"
 set CLEARING_COMMANDS="cls" "CLS" "clear" "CLEAR" "clean" "CLEAN"
 set MODULE_EXTENSIONS="cmd" "bat" "exe"
 
+cd %USERPROFILE%
+
 :init
 cls
 
