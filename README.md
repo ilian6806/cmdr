@@ -9,4 +9,4 @@ To add custom command just add your .cmd, .bat or .exe in /commands folder and u
 
 #
 
-![screenshot_2](https://user-images.githubusercontent.com/7155803/33938563-a29ccaa8-e010-11e7-87a5-0d8ed90c3311.png)
+![screenshot_22](https://user-images.githubusercontent.com/7155803/33938831-90f8df84-e011-11e7-9892-7cdea02a3549.png)
