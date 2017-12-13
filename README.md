@@ -16,16 +16,26 @@ You can also modify current commands by your own preferences.
 
 There are some already defined commands, that are similar on Windows and Unix command lines.
 
-| Windows command | Unix command  | Notes                                                   |
-| --------------- |---------------|---------------------------------------------------------|
-| dir	            | ls	          | "dir" also works on some versions of Unix.              |
-| cd              |	pwd	          | On Windows, cd alone prints the current directory.      |
-| cls             | clear	        | Clear the terminal screen                               |
-| copy	          | cp	          |                                                         |
-| xcopy           | cp -R	        | Recursively copy a directory tree                       |
-| help	          | man	          | "help" by itself prints all the commands                |
-| mkdir	          | mkdir	        |                                                         |
-| rmdir	          | rmdir	        |                                                         |
-| sort	          | sort	        |                                                         |
-| ping            | ping          |	                                                        |
-| ftp             | ftp           |	                                                        |
+| Windows command | Unix command  | Notes                                                    |
+| --------------- |---------------|----------------------------------------------------------|
+| dir	            | ls	          | "dir" also works on some versions of Unix.               |
+| cd              |	pwd	          | On Windows, cd alone prints the current directory.       |
+| cd              | cd	          | On Unix cd alone returns the user to his home directory. |
+| move	          | mv            |                                                          |
+| del	            | rm            |                                                          |	
+| deltree	        | rm -r	        | Recursively deletes entire directory tree.               |
+| cls             | clear	        | Clear the terminal screen.                               |
+| copy	          | cp	          |                                                          |
+| xcopy           | cp -R	        | Recursively copy a directory tree.                       |
+| help	          | man	          | "help" by itself prints all the commands.                |
+| mkdir	          | mkdir	        |                                                          |
+| rmdir	          | rmdir	        |                                                          |
+| sort	          | sort	        |                                                          |
+| ping            | ping          |	                                                         |
+| ftp             | ftp           |	                                                         |
+| hostname	      | hostname      |                                                          |
+| nslookup	      | nslookup      |                                                          |
+| ipconfig /all	  | ifconfig -a	  | /all lets you get the MAC address of the Windows PC      |
+| systeminfo	    | uname -a      |                                                          |
+| ver	            | uname         |                                                          |
+
