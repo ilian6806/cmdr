@@ -13,6 +13,12 @@ title CMDR
 set ROOT_DIR=%~dp0
 set INITILIZED=0
 
+set helpers_dir=%~dp0helpers
+set commands_dir=%~dp0commands
+
+:: Include all other used paths
+call paths
+
 set POSITIVE_COMMANDS="y" "Y" "yes" "YES" "ok" "OK"
 set NEGATIVE_COMMANDS="n" "N" "no" "NO"
 set CLEARING_COMMANDS="cls" "CLS" "clear" "CLEAR" "clean" "CLEAN"
@@ -27,6 +33,19 @@ if !INITILIZED!==0 call %ROOT_DIR%helpers/banner
 
 echo.
 :start
+
+:: Chech if current directory is git repo
+set git_branch_name=""
+set git_origin=""
+set git_repo=""
+
+if exist .git (
+    for /F "tokens=* USEBACKQ" %%F in (`git rev-parse --abbrev-ref HEAD`) do (set git_branch_name=%%F)
+    for /F "tokens=* USEBACKQ" %%F in (`git config --get remote.origin.url`) do (set git_origin=%%F)
+    for %%F in ("!git_origin:/=\!") do (
+        call %helpers_dir%\color_print light_yellow "%%~nxF on !git_branch_name:/= !"
+    )
+)
 
 :: Ask for command
 set /p command="%cd%> "
@@ -63,7 +82,7 @@ if defined temp goto :loop
 ))
 
 :: Check for enter
-if !commands!=="" goto :start
+if !command!=="" goto :start
 
 :: Check for command input
 if exist !ROOT_DIR!commands/!command!.* (
@@ -88,6 +107,7 @@ if exist !ROOT_DIR!commands/!command!.* (
 )
 echo.
 
+set command=""
 goto :start
 
 endlocal
